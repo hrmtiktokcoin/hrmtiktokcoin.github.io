@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شحن عملات تيك توك</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+
+    <!-- زر الوضع الداكن -->
+    <button id="darkModeToggle">🌙</button>
+
+    <div class="container">
+	  <h1>💎 شحن عملات تيك توك</h1>
+
+	  <label for="a">🔢 ادخل عدد العملات:</label>
+	  <input type="number" id="a" placeholder="مثال: 700" min="100" max="100000" required autocomplete="off">
+
+	  <label for="y">💰 أدخل السعر بالجنيه المصري:</label>
+	  <input type="number" id="y" placeholder="مثال: 445" required autocomplete="off">
+
+	  <!-- زر اختيار طريقة الدفع -->
+	  <label for="paymentSelect">🛒 اختر طريقة الدفع:</label>
+	  <select id="paymentSelect"> 
+		<option value="فودافون كاش">فودافون كاش</option>
+		<option value="أورنج كاش">أورنج كاش</option>
+		<option value="إنستاباي">إنستاباي</option>
+	  </select>
+
+	  <!-- زر إرسال الطلب -->
+	  <button id="orderButton" disabled>📩 إرسال الطلب</button>
+    </div>
+
+    <script src="script.js"></script>
+
+  </body>
+</html>

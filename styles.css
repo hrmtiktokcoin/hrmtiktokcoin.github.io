@@ -1,0 +1,197 @@
+/* ✅ جعل التصميم يبدو كتطبيق هاتف */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    direction: rtl;
+    background: linear-gradient(135deg, #dcdcdc, #c0c0c0);
+    color: black;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ✅ تحسين الوضع الداكن */
+.dark-mode {
+    background: linear-gradient(135deg, #1e1e1e, #121212);
+    color: white;
+}
+
+.dark-mode input, .dark-mode select {
+    background: #333;
+    color: white;
+}
+
+.dark-mode .container {
+    background: rgba(50, 50, 50, 0.5);
+}
+
+/* ✅ تحسين الحاوية الرئيسية */
+.container {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(15px);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+/* ✅ تحسين العنوان */
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+
+/* ✅ تحسين الحقول */
+input, select {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    box-sizing: border-box;
+    background: white;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: 0.3s ease-in-out;
+}
+
+input:focus, select:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* ✅ تحسين زر اختيار الدفع */
+#paymentSelect {
+    appearance: none;
+    width: 100%;
+    padding: 14px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* ✅ تأثير عند تمرير الماوس */
+#paymentSelect:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ✅ تحسين الخيارات داخل القائمة */
+#paymentSelect option {
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    padding: 10px;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out;
+}
+
+/* ✅ تأثير عند تمرير الماوس على الخيارات */
+#paymentSelect option:hover {
+    background: rgba(200, 200, 200, 0.9);
+    color: black;
+}
+
+/* ✅ تأثير الفتح التدريجي والمتموج */
+@keyframes waveUp {
+    0% { transform: translateY(20px) scale(0.8); opacity: 0; }
+    50% { transform: translateY(0) scale(1.02); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
+/* ✅ تطبيق التأثير عند فتح القائمة */
+#paymentSelect:focus {
+    animation: waveUp 0.4s ease-out;
+}
+
+/* ✅ تحسين زر إرسال الطلب */
+#orderButton {
+    width: 100%;
+    padding: 14px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    background: linear-gradient(135deg, #25d366, #128C7E);
+    color: white;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+/* ✅ تأثير عند الضغط */
+button:active {
+    transform: scale(0.95);
+}
+
+button:hover:not(:disabled) {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* ✅ زر الوضع الداكن */
+#darkModeToggle {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background: black;
+    color: yellow;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s, transform 0.3s;
+}
+
+#darkModeToggle:hover {
+    transform: scale(1.1);
+}
+
+/* ✅ تحويل لون الحقل إلى الأحمر عند إدخال قيمة خاطئة */
+.error {
+    border: 2px solid red;
+    background-color: #ffdddd;
+}
+
+/* ✅ تحسين الرسوم المتحركة عند إدخال خطأ */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+}
+
+/* ✅ اهتزاز الحقول عند الخطأ */
+input.error {
+    animation: shake 0.3s;
+}
+
+/* ✅ تحسين الرسوم المتحركة */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
